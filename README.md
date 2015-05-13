@@ -1,27 +1,30 @@
-# !!!!! UNDER CONSTRUCTION !!!!!
-### !!! But Working, if you wanna try !!!
-#### !! Lots of updates are coming !!
+# SC Grid System 
+#### Made with SASS 
 
-# SC Instafeed
-A Instagram feed plugin for WordPress, based on InstafeedJS
+A WordPress plugin where you can manage column sizes with shortcodes.
+It is a 12 columns Grid System (from 1 to 12, where 12 is 100% width)
 
-# Installation
-1. Upload the folder `sc-instafeed` to the `/wp-content/plugins/` directory
-2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Configure your feed into the administrator panel
-4. Place the shortcode '[sc_instafeed]' wherever you want, in your pages/posts OR place the following code into your php file:
- `<?php echo do_shortcode('[sc_instafeed]'); ?>` 
-5. Edit your custom css, into the administrator panel, if you want
-6. Enjoy!
 
-### OBS 1
-For now, the plugin does not output any CSS from the core, but you can add your own CSS into the administrator panel
+## To specify the column size of your element, just follow the exemple bellow
 
-### OBS 2
-Soon, it will be available to download from the WordPress repository
+```css
+[sc_gs_col_6]
+	{{content}}
+[/sc_gs_col_6]
+/* If you want to use the 6-column grid, for example */
 
-For now, the plugin outputs zero CSS! Soon, some CSS will be available.
-But you can add custom css into the administrator panel
+[sc_gs_col_12]
+	{{content}}
+[/sc_gs_col_12]
+/* If you want to use the 12-column grid, for example */
+
+/* Pattern */
+[sc_gs_col_{n}]
+	{{content}}
+[/sc_gs_col_{n}]
+/* Where {n} is your column size from 1 to 12 and {{content}} could be whatever you want to show inside the column element */
+```
+
 
 ## License
-[![WTFPL](wtfpl-badge.png "WTFPL")](https://github.com/zergiocosta/SC-Instafeed/blob/master/LICENSE)
+[![WTFPL](wtfpl-badge.png "WTFPL")](https://github.com/zergiocosta/SC-GridSystem/blob/master/LICENSE)

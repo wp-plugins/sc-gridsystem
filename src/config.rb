@@ -4,7 +4,6 @@
 http_path = "../"
 css_dir = "../css"
 sass_dir = "../sass"
-javascripts_dir = "../js"
 
 environment = :development
 output_style = :compressed
@@ -12,5 +11,5 @@ output_style = :compressed
 # sass_options = { :debug_info => true }
 
 relative_assets = true
-line_comments   = false
+line_comments   = true
 color_output    = false

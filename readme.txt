@@ -1,37 +1,38 @@
-=== SC Instafeed ===
+=== SC GridSystem ===
 Contributors: sergiuscosta
 Donate link: http://sergiocosta.net.br/
-Tags: instagram, instafeed, instagram feed
+Tags: gridsystem, grid, grid system, columns, shortcode
 Requires at least: 3.0.1
 Tested up to: 4.2
 Stable tag: 4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A simple Instagram feed plugin based on InstaFeedJS
+A WordPress plugin where you can manage column sizes with shortcodes.
 
 == Description ==
 
-A simple Instagram feed plugin based on InstaFeedJS
-For now, the plugin outputs ZERO CSS. You can add your own CSS into the admin panel, in SC InstaFeed options page.
+A WordPress plugin where you can manage column sizes with shortcodes.
+It is a 12 columns Grid System (from 1 to 12, where 12 is 100% width).
+
+Made with SASS
 
 Just:
-1. Upload the folder `sc-instafeed` to the `/wp-content/plugins/` directory
+1. Upload the folder `sc-gridsystem` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Configure your feed into the administrator panel
-4. Place the shortcode '[sc_instafeed]' wherever you want, in your pages/posts OR place the following code into your php file:
- `<?php echo do_shortcode('[sc_instafeed]'); ?>` 
-5. Edit your custom css, into the administrator panel, if you want
+3. Place the shortcode '[sc_gs_{n}]' (Where {n} is your column size from 1 to 12)
+4. Add you content (could be whatever you want), right after opening the shortcode above
+5. Close the column element by adding '[/sc_gs_{n}]' at the end of the content you want to show inside the column element wherever you want, in your pages/posts
 6. Enjoy!
 
 == Installation ==
 
-1. Upload the folder `sc-instafeed` to the `/wp-content/plugins/` directory
+Just:
+1. Upload the folder `sc-gridsystem` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Configure your feed into the administrator panel
-4. Place the shortcode '[sc_instafeed]' wherever you want, in your pages/posts OR place the following code into your php file:
- `<?php echo do_shortcode('[sc_instafeed]'); ?>` 
-5. Edit your custom css, into the administrator panel, if you want
+3. Place the shortcode '[sc_gs_{n}]' (Where {n} is your column size from 1 to 12)
+4. Add you content (could be whatever you want), right after opening the shortcode above
+5. Close the column element by adding '[/sc_gs_{n}]' at the end of the content you want to show inside the column element wherever you want, in your pages/posts
 6. Enjoy!
 
 == Frequently Asked Questions ==
@@ -40,7 +41,6 @@ Just:
 
 Make sure you wrote the shortcode correctly; 
 Make sure the plugin is active;
-Check the options page, into the administrator panel and select the options the way you want
 
 = If I found some problem, should I report you? = 
 

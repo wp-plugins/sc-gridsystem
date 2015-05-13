@@ -1,6 +1,6 @@
 // -------------------------------------------------------
-// Gruntfile.js for Sergio Costa's projects
-// Version: 2.0.0
+// Gruntfile.js for Grid System Studies
+// Version: 1.0.0
 //
 // Author:  Sergio Costa
 // URL:     http://www.sergiocosta.net.br
@@ -18,27 +18,12 @@ module.exports = function(grunt) {
         // Setting Directories
         dirs: {
             app:  "../",
-            js:   "../js",
             sass: "../sass",
             css:  "../css",
         },
 
         // Metadata
         pkg: grunt.file.readJSON("package.json"),
-        banner:
-        "\n" +
-        "/*\n" +
-         "* -------------------------------------------------------\n" +
-         "* Project: Sergio Costa InstaFeed\n" +
-         "* Version: 1.0.0\n" +
-         "*\n" +
-         "* Author:  Sergio Costa and InstaFeed\n" +
-         "* URL:     http://sergiocosta.net.br and http://instafeedjs.com\n" +
-         "* Contact: sergio.costa@outlook.com.com\n" +
-         "*\n" +
-         "*---------------------------------------------------------\n" +
-         "*/\n" +
-         "",
 
         // Watch 
         // Para instalar na pasta src do projeto: $ npm install grunt-contrib-watch --save-dev
@@ -52,29 +37,6 @@ module.exports = function(grunt) {
                     "<%= dirs.sass %>/{,*/}*.{scss,sass}"
                 ],
                 tasks: ["compass", "notify:compass"]
-            },
-            js: {
-                files: [
-                    "<%= dirs.js %>/sc-instafeed.js"
-                ],
-                tasks: ["uglify", "notify:js"]
-            }
-        },
-
-        // Uglify
-        // Para instalar na pasta src do projeto: $ npm install grunt-contrib-uglify --save-dev
-        uglify: {
-            options: {
-                mangle: false,
-                banner: "<%= banner %>"
-            },
-            dist: {
-                files: {
-                    "<%= dirs.js %>/sc-instafeed.min.js": [
-                        "<%= dirs.js %>/sc-instafeed.js"
-                    ]
-
-                }
             }
         },
 
@@ -101,13 +63,7 @@ module.exports = function(grunt) {
               title: "SASS - <%= pkg.title %>",
               message: "Compilado e minificado com sucesso!"
             }
-          },
-          js: {
-            options: {
-              title: "Javascript - <%= pkg.title %>",
-              message: "Minificado e validado com sucesso!"
-            }
-          },
+          }
         },
 
     };
@@ -115,14 +71,12 @@ module.exports = function(grunt) {
     // Init Grunt
         grunt.initConfig(projectConfig);
 
+
     // Register Tasks
     // ----------------
 
     // Watch Project - $ grunt
     grunt.registerTask( "default", [ "watch" ]);
-
-    // Uglify js - $ grunt u
-    grunt.registerTask( "u", [ "uglify" ]);
 
 
 };
