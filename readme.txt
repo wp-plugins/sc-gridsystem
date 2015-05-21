@@ -17,13 +17,6 @@ It is a 12 columns Grid System (from 1 to 12, where 12 is 100% width).
 
 Made with SASS
 
-1. Upload the folder `sc-gridsystem` to the `/wp-content/plugins/` directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Place the shortcode '[sc_gs_{n}]' (Where {n} is your column size from 1 to 12)
-1. Add you content (could be whatever you want), right after opening the shortcode above
-1. Close the column element by adding '[/sc_gs_{n}]' at the end of the content you want to show inside the column element wherever you want, in your pages/posts
-1. Enjoy!
-
 == Installation ==
 
 1. Upload the folder `sc-gridsystem` to the `/wp-content/plugins/` directory
